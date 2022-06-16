@@ -1,0 +1,20 @@
+{
+  "name": "workflow-ca-resit-eric-nduwimana",
+  "version": "1.0.0",
+  "description": "## Brief",
+  "main": "babel.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EN1993/workflow-ca-resit-eric-nduwimana.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EN1993/workflow-ca-resit-eric-nduwimana/issues"
+  },
+  "homepage": "https://github.com/EN1993/workflow-ca-resit-eric-nduwimana#readme"
+}
