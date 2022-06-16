@@ -1,4 +1,4 @@
-import { bread, cheese, lettuce, milk, tomato } from './items';
+import { bread, cheese, lettuce, milk, tomato } from './item';
 
 // Create an interface called "Item" with the following variables and types:
 // id: number
