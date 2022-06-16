@@ -705,7 +705,7 @@ const myCart = new ShoppingCart();
 myCart.addToCart((0, _item.bread));
 myCart.removeFromCart((0, _item.bread));
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"fD7H8","./item":"lMH48"}],"lMH48":[function(require,module,exports) {
+},{"./item":"lMH48","@parcel/transformer-js/src/esmodule-helpers.js":"fD7H8"}],"lMH48":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "milk", ()=>milk);
