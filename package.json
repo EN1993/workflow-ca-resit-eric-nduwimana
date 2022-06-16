@@ -4,7 +4,7 @@
   "description": "## Brief",
   "main": "babel.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,22 +18,32 @@
   },
   "homepage": "https://github.com/EN1993/workflow-ca-resit-eric-nduwimana#readme",
   "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-typescript": "^7.17.12",
     "@parcel/transformer-sass": "^2.6.0",
+    "@types/jest": "^28.1.1",
+    "babel-jest": "^28.1.1",
+    "jest": "^28.1.1",
+    "process": "^0.11.10",
     "sass": "^1.52.3"
   },
   "dependencies": {
     "anymatch": "^3.1.2",
+    "apollo-boost": "^0.4.9",
     "binary-extensions": "^2.2.0",
     "braces": "^3.0.2",
     "chokidar": "^3.5.3",
     "fill-range": "^7.0.1",
     "fsevents": "^2.3.2",
     "glob-parent": "^5.1.2",
+    "graphql": "^15.8.0",
     "immutable": "^4.1.0",
     "is-binary-path": "^2.1.0",
     "is-extglob": "^2.1.1",
     "is-glob": "^4.0.3",
     "is-number": "^7.0.0",
+    "lodash": "^4.17.21",
     "normalize-path": "^3.0.0",
     "picomatch": "^2.3.1",
     "readdirp": "^3.6.0",

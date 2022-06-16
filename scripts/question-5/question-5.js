@@ -2,54 +2,56 @@
 
 
 
-// const userList = document.querySelector('.results-list');
+const userList = document.querySelector('.results-list');
 
-// import ApolloClient, { gql } from 'apollo-boost';
+import ApolloClient, { gql } from 'apollo-boost';
 
-// async function myGQL() {
-  
+import {orderBy} from 'lodash'
 
-  
-// const client = new ApolloClient({
-//   uri: 'https://graphqlzero.almansi.me/api'
-// });
-// const json = await client.query({ query: gql`
-// {
-//   posts {
-//     data {
-//       id
-//       title
-//     }
-//   }
-// }
-  
+import 'regenerator-runtime/runtime';
 
-// `}).then(console.log);
+async function myGQL() {
 
-// const orderedPosts = orderBy(await json.data.posts.data, ["id"], ["desc"]);
-
-//   console.log('NEW POST:', orderedPosts);
-
- 
-
-
-//   for (let i = 0; i < orderedPosts.length; i++) {
-
-
-
-//     if (i === 5) {
-//       break;
-//     }
+  const client = new ApolloClient({
+    uri: 'https://graphqlzero.almansi.me/api'
+  });
+  const json = await client.query({ query: gql`
+  {
+    posts {
+      data {
+        id
+        title
+      }
+    }
+  }
     
-//     // console.log('NEW POST:', orderedPosts);
+
+  `}).then(console.log);
+
+  const orderedPosts = orderBy(await json.data.posts.data, ["id"], ["desc"]);
+
+    console.log('NEW POST:', orderedPosts);
+
+  
 
 
-//   }
+    for (let i = 0; i < orderedPosts.length; i++) {
 
 
-// }
 
-// myGQL()
+      if (i === 5) {
+        break;
+      }
+      
+      // console.log('NEW POST:', orderedPosts);
+
+
+    }
+
+
+  }
+
+myGQL()
   
 
  
