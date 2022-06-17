@@ -1,19 +1,18 @@
 // API url: https://graphqlzero.almansi.me/api
 
-
-
-const userList = document.querySelector('.results-list');
-
-import ApolloClient, { gql } from 'apollo-boost';
-
 import {orderBy} from 'lodash'
 
 import 'regenerator-runtime/runtime';
 
+
+const postsList = document.querySelector('.results-list');
+
+import ApolloClient, { gql } from 'apollo-boost';
+
 async function myGQL() {
 
   const client = new ApolloClient({
-    uri: 'https://graphqlzero.almansi.me/api'
+    uri: 'https://graphqlzero.almansi.me/api',
   });
   const json = await client.query({ query: gql`
   {
@@ -26,33 +25,33 @@ async function myGQL() {
   }
     
 
-  `}).then(console.log);
+  `,});
 
-  const orderedPosts = orderBy(await json.data.posts.data, ["id"], ["desc"]);
+  const orderedPosts = orderBy( json.data.posts.data, ["id"], ["desc"]);
 
-    console.log('NEW POST:', orderedPosts);
-
-  
-
+    let html ='';
 
     for (let i = 0; i < orderedPosts.length; i++) {
 
-
-
-      if (i === 5) {
-        break;
+      if (orderedPosts[i] == 10) {
+         break;
       }
+
+      console.log('NEW POSTS:', orderedPosts);
       
-      // console.log('NEW POST:', orderedPosts);
+    const post = ` <ul class= "list-item">
+                      <li> Id: ${orderedPosts[i].id}</li>
+                      <li> Title: ${orderedPosts[i].title}</li>     
+                    </ul> `; 
+      
 
+      html += post;
 
+      postsList.innerHTML = html;
+      return orderedPosts;
     }
 
 
-  }
+}
 
-myGQL()
-  
-
- 
-
+myGQL();
