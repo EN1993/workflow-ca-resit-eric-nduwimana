@@ -753,17 +753,15 @@ async function myGQL() {
     });
     const json = await client.query({
         query: _apolloBoost.gql`
-  {
-    posts {
-      data {
-        id
-        title
+      {
+        posts {
+          data {
+            id
+            title
+          }
+        }
       }
-    }
-  }
-    
-
-  `
+    `
     });
     const orderedPosts = (0, _lodash.orderBy)(json.data.posts.data, [
         "id"
@@ -772,15 +770,13 @@ async function myGQL() {
     ]);
     let html = "";
     for(let i = 0; i < orderedPosts.length; i++){
-        if (orderedPosts[i] == 10) break;
-        console.log("NEW POSTS:", orderedPosts);
+        if (i == 10) break;
         const post = ` <ul class= "list-item">
                       <li> Id: ${orderedPosts[i].id}</li>
                       <li> Title: ${orderedPosts[i].title}</li>     
                     </ul> `;
         html += post;
         postsList.innerHTML = html;
-        return orderedPosts;
     }
 }
 myGQL();

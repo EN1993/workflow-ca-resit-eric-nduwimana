@@ -1,9 +1,10 @@
 body {
-  background: green;
+  background: #607d8b;
 }
 
 .list-item {
   background: #fff;
+  margin: 10px;
 }
 
 /*# sourceMappingURL=index.3ca998d7.css.map */
